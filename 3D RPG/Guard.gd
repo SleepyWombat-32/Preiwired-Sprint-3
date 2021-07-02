@@ -1,5 +1,5 @@
 extends KinematicBody
-var vel : Vector3 = Vector3(-1,0,0)
+var vel : Vector3 = Vector3(-2,0,0)
 var gravity : float = 12.0
 
 var get_up_rat_voice = preload("res://Music/GuardVoice/GetUpRat.wav")
@@ -14,6 +14,7 @@ func _physics_process(delta):
 		if can_speak == true:
 			$Voice.stream = get_up_rat_voice
 			$Voice.playing = true
+			get_tree().call_group("NPC","change_text", "Get up rat, time for testing")
 			can_speak = false
 	else:
 		vel = move_and_slide(vel, Vector3.UP)

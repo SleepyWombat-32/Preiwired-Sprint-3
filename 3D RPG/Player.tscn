@@ -1,6 +1,7 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Player.gd" type="Script" id=1]
+[ext_resource path="res://GUI/NPCdialogeBox.tscn" type="PackedScene" id=2]
 
 [sub_resource type="CapsuleShape" id=1]
 height = 2.0
@@ -29,3 +30,7 @@ mesh = SubResource( 2 )
 material = SubResource( 3 )
 
 [node name="PlayerSpeach" type="AudioStreamPlayer3D" parent="."]
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="NPCdialogeBox" parent="CanvasLayer" instance=ExtResource( 2 )]
