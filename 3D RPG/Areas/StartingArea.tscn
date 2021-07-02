@@ -1,4 +1,4 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://TemplateWorld.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Guards/Guard.tscn" type="PackedScene" id=2]
@@ -25,6 +25,11 @@ albedo_color = Color( 0.133333, 0.32549, 0.105882, 1 )
 metallic = 0.2
 metallic_specular = 0.7
 roughness = 0.7
+
+[sub_resource type="SpatialMaterial" id=8]
+params_diffuse_mode = 4
+metallic = 0.2
+roughness = 0.1
 
 [sub_resource type="SphereMesh" id=7]
 radius = 0.1
@@ -242,6 +247,48 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 6 )
 
+[node name="Ceilings" type="Spatial" parent="Objects/FloorsWallCeilings" index="3"]
+
+[node name="Ceiling1" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 10, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling1" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling1" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 8 )
+
+[node name="Ceiling2" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="1"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling2" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling2" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 8 )
+
+[node name="Ceiling3" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="2"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling3" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling3" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 8 )
+
+[node name="Ceiling4" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="3"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 10, 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling4" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling4" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 8 )
+
 [node name="CPUParticles" type="CPUParticles" parent="." index="4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.4263, 0 )
 amount = 100
@@ -251,4 +298,4 @@ emission_shape = 1
 emission_sphere_radius = 50.0
 
 [node name="Guard" parent="." index="5" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 8.80885, 2.04061, 9.44876 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3499, 2.04061, 9.44876 )

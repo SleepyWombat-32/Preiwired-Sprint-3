@@ -1,10 +1,8 @@
 extends Control
-
+# The script for the start menu, contains the buttons scripts
 
 
 func _on_StartButton_pressed():
-	$AnimationPlayer.play("FadeMusic")
-	yield ($AnimationPlayer, "animation_finished")
 	var _u = get_tree().change_scene("res://Areas/StartingArea.tscn")
 
 
