@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/GetUpRat.wav-c0857a1879c2dadcebe2446cdadce1ec.sample"
+
+[deps]
+
+source_file="res://Music/GuardVoice/GetUpRat.wav"
+dest_files=[ "res://.import/GetUpRat.wav-c0857a1879c2dadcebe2446cdadce1ec.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0

@@ -33,7 +33,7 @@ height = 0.1
 [node name="StartingArea" instance=ExtResource( 1 )]
 
 [node name="Player" parent="." index="1"]
-transform = Transform( 0.388272, 0, -0.921545, 0, 1, 0, 0.921545, 0, 0.388272, 7.02659, 1.95592, 2.72258 )
+transform = Transform( -0.660041, 0, -0.75123, 0, 1, 0, 0.75123, 0, -0.660041, -8.67736, 1.95592, 0.360303 )
 
 [node name="Objects" type="Spatial" parent="." index="2"]
 
