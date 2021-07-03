@@ -6,7 +6,7 @@ var m_2_vel : Vector3 = Vector3(2, 0, 0)
 var gravity : float = 12.0
 
 var get_up_rat_voice = preload("res://Music/GuardVoice/GetUpRat.wav")
-var follow_me_voice = "nothing here yet"
+var follow_me_voice = preload("res://Music/GuardVoice/FollowMe.wav")
 
 var can_speak : bool = true
 
@@ -21,8 +21,7 @@ func _physics_process(delta):
 
 func move_2():
 	if translation.x >= 20:
-		yield(get_tree().create_timer(2),"timeout")
-		print("guard is at 2nd location")
+		print ("Guard is at 2nd location")
 		move = 3
 	else:
 		m_2_vel = move_and_slide(m_2_vel, Vector3.UP)
@@ -37,9 +36,9 @@ func move_1():
 			get_tree().call_group("NPC","change_text", "Get up rat, it's time for testing", 3)
 			can_speak = false
 			yield(get_tree().create_timer(3),"timeout")
-			$Voice.stream = get_up_rat_voice
+			$Voice.stream = follow_me_voice
 			$Voice.playing = true
-			get_tree().call_group("NPC","change_text", "Follow me", 5)
+			get_tree().call_group("NPC","change_text", "Follow me", 3)
 			move = 2
 	else:
 		m_1_vel = move_and_slide(m_1_vel, Vector3.UP)
