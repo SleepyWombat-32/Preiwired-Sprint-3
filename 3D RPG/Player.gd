@@ -85,5 +85,6 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		mouseDelta = event.relative
 
-func teleport(pos):
+func teleport(pos, rotate):
+	rotation_degrees.y = rotate
 	translation = pos
