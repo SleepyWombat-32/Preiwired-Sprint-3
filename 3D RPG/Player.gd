@@ -85,4 +85,5 @@ func _input(event):
 	if event is InputEventMouseMotion:
 		mouseDelta = event.relative
 
-	
+func teleport(pos):
+	translation = pos

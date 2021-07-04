@@ -247,6 +247,87 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 6 )
 
+[node name="Floor11" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="10"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor11" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor11" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor12" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="11"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor12" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor12" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor13" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="12"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor13" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor13" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor14" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="13"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor14" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor14" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor18" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.8, 0, 10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor18" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor18" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor19" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="15"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -39.8, 0, 0 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor19" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor19" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor15" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="16"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor15" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor15" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor16" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="17"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor16" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor16" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor17" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="18"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -10 )
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor17" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor17" index="1"]
+mesh = SubResource( 2 )
+
 [node name="Ceilings" type="Spatial" parent="Objects/FloorsWallCeilings" index="3"]
 
 [node name="Ceiling1" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="0"]
@@ -298,4 +379,4 @@ emission_shape = 1
 emission_sphere_radius = 50.0
 
 [node name="Guard" parent="." index="5" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 15.3499, 2.04061, 9.44876 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 2, 0 )

@@ -14,6 +14,11 @@ config/name="3D RPG"
 run/main_scene="res://Areas/StartingArea.tscn"
 config/icon="res://icon.png"
 
+[autoload]
+
+Globals="*res://Globals.gd"
+SceneChanger="*res://GUI/SceneChanger.tscn"
+
 [input]
 
 move_backward={
