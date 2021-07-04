@@ -20,15 +20,15 @@ size = Vector3( 2.5, 0.1, 10 )
 [sub_resource type="BoxShape" id=5]
 extents = Vector3( 1.25, 0.1, 5 )
 
-[sub_resource type="SpatialMaterial" id=8]
+[sub_resource type="SpatialMaterial" id=6]
 params_diffuse_mode = 4
 metallic = 0.2
 roughness = 0.1
 
-[sub_resource type="BoxShape" id=9]
+[sub_resource type="BoxShape" id=7]
 extents = Vector3( 0.01, 5, 5 )
 
-[sub_resource type="SphereMesh" id=7]
+[sub_resource type="SphereMesh" id=8]
 radius = 0.1
 height = 0.1
 
@@ -772,7 +772,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling1" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Ceiling2" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="1"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 0 )
@@ -785,7 +785,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling2" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Ceiling3" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="2"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 10, 10 )
@@ -798,7 +798,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling3" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Ceiling4" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="3"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 10, 10 )
@@ -811,7 +811,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling4" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Ceiling5" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 20, -10 )
@@ -824,7 +824,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling5" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Ceiling6" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="5"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 20, 0 )
@@ -837,7 +837,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling6" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Ceiling7" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="6"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 20, 10 )
@@ -850,7 +850,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling7" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Ceiling8" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="7"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 20, -10 )
@@ -863,7 +863,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling8" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Ceiling9" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="8"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 20, 0 )
@@ -876,7 +876,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling9" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Ceiling10" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="9"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 20, 10 )
@@ -889,7 +889,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling10" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Ceiling11" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="10"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 10, 0 )
@@ -902,7 +902,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling11" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Ceiling12" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="11"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 10, 10 )
@@ -915,7 +915,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling12" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Ceiling13" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="12"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 10, 10 )
@@ -928,7 +928,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling13" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Ceiling14" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="13"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 10, 0 )
@@ -941,7 +941,7 @@ shape = SubResource( 1 )
 
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling14" index="1"]
 mesh = SubResource( 2 )
-material = SubResource( 8 )
+material = SubResource( 6 )
 
 [node name="Lights" type="Spatial" parent="Objects" index="1"]
 
@@ -962,7 +962,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="Objects/InvisWalls/InvisWall1" index="0"]
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="InvisWall2" type="StaticBody" parent="Objects/InvisWalls" index="1"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 5, 15 )
@@ -973,7 +973,7 @@ __meta__ = {
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="Objects/InvisWalls/InvisWall2" index="0"]
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="InvisWall3" type="StaticBody" parent="Objects/InvisWalls" index="2"]
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 10, 5, 5 )
@@ -984,13 +984,13 @@ __meta__ = {
 }
 
 [node name="CollisionShape" type="CollisionShape" parent="Objects/InvisWalls/InvisWall3" index="0"]
-shape = SubResource( 9 )
+shape = SubResource( 7 )
 
 [node name="CPUParticles" type="CPUParticles" parent="." index="4"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.4263, 0 )
 amount = 100
 lifetime = 5.0
-mesh = SubResource( 7 )
+mesh = SubResource( 8 )
 emission_shape = 1
 emission_sphere_radius = 50.0
 
