@@ -17,4 +17,4 @@ func _input(event):
 			AudioServer.set_bus_mute(0, false)
 func _process(delta):
 	if baddies_killed == 4:
-		pass
+		SceneChanger.change_scene("res://Menus/YouWinScreen.tscn")
