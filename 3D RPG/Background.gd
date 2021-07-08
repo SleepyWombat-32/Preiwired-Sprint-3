@@ -4,4 +4,4 @@ extends AudioStreamPlayer
 func _ready(): 
 	#$AnimationPlayer.play("FadeIn")
 	print ("music muted")
-	pass
+

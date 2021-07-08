@@ -1,7 +1,11 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://TemplateWorld.tscn" type="PackedScene" id=1]
 [ext_resource path="res://Guards/Guard.tscn" type="PackedScene" id=2]
+[ext_resource path="res://Areas/PartsOfAreas/Doorframe.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Areas/PartsOfAreas/Door.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Entitys/Enemy.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Areas/StartingArea.gd" type="Script" id=6]
 
 [sub_resource type="BoxShape" id=1]
 extents = Vector3( 5, 0.1, 5 )
@@ -28,15 +32,11 @@ roughness = 0.1
 [sub_resource type="BoxShape" id=7]
 extents = Vector3( 0.01, 5, 5 )
 
-[sub_resource type="SphereMesh" id=8]
-radius = 0.1
-height = 0.1
+[sub_resource type="BoxShape" id=8]
+extents = Vector3( 3, 4, 5 )
 
 [node name="StartingArea" instance=ExtResource( 1 )]
-
-[node name="Player" parent="." index="1"]
-transform = Transform( -0.660041, 0, -0.75123, 0, 1, 0, 0.75123, 0, -0.660041, -8.67736, 1.95592, 0.360303 )
-collision_mask = 3
+script = ExtResource( 6 )
 
 [node name="Objects" type="Spatial" parent="." index="2"]
 
@@ -161,7 +161,215 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall10" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="9"]
+[node name="Wall46" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="9"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -10, 5, -15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall46" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall46" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall72" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="10"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 5, -15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall72" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall72" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall85" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="11"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 5, -65 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall85" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall85" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall86" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="12"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -10, 5, -65 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall86" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall86" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall87" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="13"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -20, 5, -65 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall87" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall87" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall88" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="14"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -30, 5, -65 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall88" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall88" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall89" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="15"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -40, 5, -65 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall89" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall89" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall90" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="16"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -50, 5, -65 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall90" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall90" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall91" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="17"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -50, 15, -65 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall91" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall91" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall92" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="18"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -40, 15, -65 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall92" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall92" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall93" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="19"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -30, 15, -65 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall93" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall93" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall94" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="20"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -20, 15, -65 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall94" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall94" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall95" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="21"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -10, 15, -65 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall95" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall95" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall96" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="22"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 15, -65 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall96" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall96" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall73" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="23"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 0, 15, -15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall73" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall73" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall74" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="24"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -10, 15, -15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall74" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall74" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall10" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="25"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -30, 5, -15 )
 __meta__ = {
 "_edit_group_": true
@@ -174,7 +382,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall11" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="10"]
+[node name="Wall11" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="26"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -40, 5, -15 )
 __meta__ = {
 "_edit_group_": true
@@ -187,7 +395,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall12" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="11"]
+[node name="Wall12" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="27"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -50, 5, -15 )
 __meta__ = {
 "_edit_group_": true
@@ -200,7 +408,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall13" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="12"]
+[node name="Wall13" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="28"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -50, 5, 15 )
 __meta__ = {
 "_edit_group_": true
@@ -213,7 +421,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall14" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="13"]
+[node name="Wall14" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="29"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -40, 5, 15 )
 __meta__ = {
 "_edit_group_": true
@@ -226,7 +434,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall15" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="14"]
+[node name="Wall15" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="30"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -30, 5, 15 )
 __meta__ = {
 "_edit_group_": true
@@ -239,7 +447,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall16" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="15"]
+[node name="Wall16" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="31"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -20, 5, 15 )
 __meta__ = {
 "_edit_group_": true
@@ -253,7 +461,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 1.06581e-14, 1, 0, 0, 0 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall17" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="16"]
+[node name="Wall17" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="32"]
 transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -15, 15, -10 )
 __meta__ = {
 "_edit_group_": true
@@ -266,7 +474,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall18" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="17"]
+[node name="Wall18" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="33"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -20, 15, -15 )
 __meta__ = {
 "_edit_group_": true
@@ -279,7 +487,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall19" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="18"]
+[node name="Wall19" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="34"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -30, 15, -15 )
 __meta__ = {
 "_edit_group_": true
@@ -292,7 +500,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall20" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="19"]
+[node name="Wall20" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="35"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -40, 15, -15 )
 __meta__ = {
 "_edit_group_": true
@@ -305,7 +513,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall21" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="20"]
+[node name="Wall21" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="36"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -50, 15, -15 )
 __meta__ = {
 "_edit_group_": true
@@ -318,7 +526,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall22" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="21"]
+[node name="Wall22" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="37"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -50, 15, 15 )
 __meta__ = {
 "_edit_group_": true
@@ -331,7 +539,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall23" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="22"]
+[node name="Wall23" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="38"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -40, 15, 15 )
 __meta__ = {
 "_edit_group_": true
@@ -344,7 +552,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall24" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="23"]
+[node name="Wall24" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="39"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -30, 15, 15 )
 __meta__ = {
 "_edit_group_": true
@@ -357,7 +565,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall25" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="24"]
+[node name="Wall25" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="40"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -20, 15, 15 )
 __meta__ = {
 "_edit_group_": true
@@ -370,7 +578,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall26" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="25"]
+[node name="Wall26" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="41"]
 transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -15, 15, 10 )
 __meta__ = {
 "_edit_group_": true
@@ -383,7 +591,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall27" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="26"]
+[node name="Wall27" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="42"]
 transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -15, 15, 0 )
 __meta__ = {
 "_edit_group_": true
@@ -396,7 +604,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall28" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="27"]
+[node name="Wall28" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="43"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10, 5, 15 )
 __meta__ = {
 "_edit_group_": true
@@ -409,7 +617,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall29" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="28"]
+[node name="Wall29" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="44"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 20, 5, -5 )
 __meta__ = {
 "_edit_group_": true
@@ -422,7 +630,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall30" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="29"]
+[node name="Wall30" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="45"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 20, 5, 15 )
 __meta__ = {
 "_edit_group_": true
@@ -435,7 +643,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall31" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="30"]
+[node name="Wall31" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="46"]
 transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 25, 5, 10 )
 __meta__ = {
 "_edit_group_": true
@@ -448,7 +656,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Wall32" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="31"]
+[node name="Wall32" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="47"]
 transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 25, 5, 0 )
 __meta__ = {
 "_edit_group_": true
@@ -461,40 +669,643 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="Doorframes" type="Spatial" parent="Objects/FloorsWallCeilings" index="1"]
-
-[node name="Doorframe1" type="StaticBody" parent="Objects/FloorsWallCeilings/Doorframes" index="0"]
-transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, 5, 5, 10 )
+[node name="Wall33" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="48"]
+transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -55, 5, -10 )
 __meta__ = {
 "_edit_group_": true
 }
 
-[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Doorframes/Doorframe1" index="0"]
-transform = Transform( 1, 0, 0, 0, 1, -8.35187e-23, 0, -8.35187e-23, 1, 3.75, 0, 0 )
-mesh = SubResource( 4 )
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall33" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall33" index="1"]
+mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="CSGMesh2" type="CSGMesh" parent="Objects/FloorsWallCeilings/Doorframes/Doorframe1" index="1"]
-transform = Transform( 1, 0, 0, 0, 1, -8.35187e-23, 0, -8.35187e-23, 1, -3.75, 0, 0 )
-mesh = SubResource( 4 )
+[node name="Wall34" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="49"]
+transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -55, 15, -10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall34" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall34" index="1"]
+mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="CSGMesh3" type="CSGMesh" parent="Objects/FloorsWallCeilings/Doorframes/Doorframe1" index="2"]
-transform = Transform( -4.37114e-08, 0, -1, 1.64203e-15, 1, 0, 1, -8.35187e-23, -4.37114e-08, 0, -4.76837e-07, -3.75 )
-mesh = SubResource( 4 )
+[node name="Wall35" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="50"]
+transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -55, 15, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall35" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall35" index="1"]
+mesh = SubResource( 2 )
 material = SubResource( 3 )
 
-[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Doorframes/Doorframe1" index="3"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 3.75, 0, 0 )
-shape = SubResource( 5 )
+[node name="Wall36" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="51"]
+transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -55, 15, 10 )
+__meta__ = {
+"_edit_group_": true
+}
 
-[node name="CollisionShape2" type="CollisionShape" parent="Objects/FloorsWallCeilings/Doorframes/Doorframe1" index="4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -3.75038, 0, 0 )
-shape = SubResource( 5 )
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall36" index="0"]
+shape = SubResource( 1 )
 
-[node name="CollisionShape3" type="CollisionShape" parent="Objects/FloorsWallCeilings/Doorframes/Doorframe1" index="5"]
-transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -3.75 )
-shape = SubResource( 5 )
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall36" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall37" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="52"]
+transform = Transform( -4.37114e-08, 1, -4.37114e-08, 0, -4.37114e-08, -1, -1, -4.37114e-08, 1.91069e-15, -55, 5, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall37" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall37" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall38" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="53"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -60, 5, 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall38" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall38" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall39" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="54"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -70, 5, 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall39" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall39" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall40" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="55"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -80, 5, 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall40" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall40" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall41" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="56"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -80, 15, 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall41" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall41" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall42" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="57"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -70, 15, 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall42" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall42" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall43" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="58"]
+transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, -60, 15, 15 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall43" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall43" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall44" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="59"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -55, 5, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall44" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall44" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall45" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="60"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -55, 5, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall45" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall45" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall62" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="61"]
+transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -60, 5, -45 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall62" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall62" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall63" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="62"]
+transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -70, 5, -45 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall63" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall63" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall64" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="63"]
+transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -80, 5, -45 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall64" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall64" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall65" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="64"]
+transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -80, 15, -45 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall65" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall65" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall66" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="65"]
+transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -70, 15, -45 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall66" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall66" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall67" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="66"]
+transform = Transform( -1, 8.74228e-08, -3.82137e-15, 0, -4.37114e-08, -1, -8.74228e-08, -1, 4.37114e-08, -60, 15, -45 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall67" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall67" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall47" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="67"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -55, 15, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall47" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall47" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall48" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="68"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -55, 15, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall48" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall48" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall68" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="69"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -55, 5, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall68" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall68" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall69" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="70"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -55, 5, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall69" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall69" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall75" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="71"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 5, 5, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall75" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall75" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall76" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="72"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 5, 5, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall76" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall76" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall77" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="73"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 5, 5, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall77" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall77" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall78" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="74"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 5, 5, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall78" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall78" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall79" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="75"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 5, 5, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall79" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall79" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall80" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="76"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 5, 15, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall80" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall80" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall81" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="77"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 5, 15, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall81" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall81" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall82" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="78"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 5, 15, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall82" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall82" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall83" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="79"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 5, 15, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall83" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall83" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall84" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="80"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, 5, 15, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall84" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall84" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall70" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="81"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -55, 15, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall70" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall70" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall71" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="82"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -55, 15, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall71" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall71" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall49" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="83"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -55, 15, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall49" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall49" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall50" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="84"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -85, 5, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall50" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall50" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall51" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="85"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -85, 5, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall51" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall51" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall52" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="86"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -85, 5, -10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall52" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall52" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall53" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="87"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -85, 5, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall53" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall53" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall54" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="88"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -85, 5, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall54" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall54" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall55" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="89"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -85, 5, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall55" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall55" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall56" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="90"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -85, 15, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall56" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall56" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall57" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="91"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -85, 15, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall57" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall57" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall58" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="92"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -85, 15, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall58" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall58" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall59" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="93"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -85, 15, -10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall59" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall59" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall60" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="94"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -85, 15, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall60" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall60" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Wall61" type="StaticBody" parent="Objects/FloorsWallCeilings/Walls" index="95"]
+transform = Transform( -4.37114e-08, -1, 4.37114e-08, 0, -4.37114e-08, -1, 1, -4.37114e-08, 1.91069e-15, -85, 15, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Walls/Wall61" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Walls/Wall61" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 3 )
+
+[node name="Doors" type="Spatial" parent="Objects/FloorsWallCeilings" index="1"]
+
+[node name="Door" parent="Objects/FloorsWallCeilings/Doors" index="0" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 5, 0 )
+open_type = "Player"
+
+[node name="Door2" parent="Objects/FloorsWallCeilings/Doors" index="1" instance=ExtResource( 4 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 5, -40 )
+open_type = "Player"
+
+[node name="Doorframes" type="Spatial" parent="Objects/FloorsWallCeilings" index="2"]
+
+[node name="Doorframe1" parent="Objects/FloorsWallCeilings/Doorframes" index="0" instance=ExtResource( 3 )]
 
 [node name="Doorframe2" type="StaticBody" parent="Objects/FloorsWallCeilings/Doorframes" index="1"]
 transform = Transform( 1, 0, 0, 0, -4.37114e-08, -1, 0, 1, -4.37114e-08, 10, 5, -5 )
@@ -529,7 +1340,7 @@ shape = SubResource( 5 )
 transform = Transform( -4.37114e-08, 0, 1, 0, 1, 0, -1, 0, -4.37114e-08, 0, 0, -3.75 )
 shape = SubResource( 5 )
 
-[node name="Floors" type="Spatial" parent="Objects/FloorsWallCeilings" index="2"]
+[node name="Floors" type="Spatial" parent="Objects/FloorsWallCeilings" index="3"]
 
 [node name="Floor1" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, 0 )
@@ -759,7 +1570,583 @@ shape = SubResource( 1 )
 [node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor22" index="1"]
 mesh = SubResource( 2 )
 
-[node name="Ceilings" type="Spatial" parent="Objects/FloorsWallCeilings" index="3"]
+[node name="Floor23" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="19"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor23" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor23" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor24" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="20"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor24" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor24" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor25" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="21"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, -10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor25" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor25" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor26" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="22"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, -10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor26" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor26" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor27" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="23"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor27" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor27" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor28" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="24"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor28" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor28" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor29" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="25"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor29" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor29" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor30" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="26"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor30" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor30" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor31" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="27"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, -10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor31" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor31" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor32" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="28"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor32" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor32" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor33" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="29"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor33" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor33" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor34" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="30"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor34" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor34" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor35" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="31"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor35" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor35" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor36" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="32"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor36" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor36" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor37" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="33"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor37" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor37" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor38" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="34"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 0, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor38" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor38" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor39" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="35"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 0, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor39" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor39" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor40" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="36"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 0, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor40" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor40" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor41" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="37"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor41" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor41" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor42" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="38"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor42" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor42" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor43" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="39"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor43" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor43" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor44" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="40"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor44" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor44" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor45" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="41"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor45" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor45" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor46" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="42"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor46" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor46" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor47" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="43"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor47" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor47" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor48" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="44"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor48" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor48" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor49" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="45"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor49" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor49" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor50" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="46"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor50" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor50" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor51" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="47"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor51" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor51" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor52" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="48"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor52" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor52" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor53" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="49"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor53" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor53" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor54" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="50"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor54" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor54" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor55" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="51"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor55" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor55" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor56" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="52"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor56" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor56" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor57" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="53"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor57" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor57" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor58" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="54"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor58" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor58" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor59" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="55"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor59" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor59" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor60" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="56"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor60" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor60" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor61" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="57"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor61" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor61" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor62" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="58"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor62" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor62" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor63" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="59"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor63" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor63" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor64" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="60"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor64" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor64" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor65" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="61"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor65" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor65" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor66" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="62"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 0, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor66" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor66" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor67" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="63"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 0, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor67" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor67" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor68" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="64"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 0, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor68" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor68" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor69" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="65"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 0, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor69" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor69" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Floor70" type="StaticBody" parent="Objects/FloorsWallCeilings/Floors" index="66"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 0, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Floors/Floor70" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Floors/Floor70" index="1"]
+mesh = SubResource( 2 )
+
+[node name="Ceilings" type="Spatial" parent="Objects/FloorsWallCeilings" index="4"]
 
 [node name="Ceiling1" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="0"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 10, 0 )
@@ -878,7 +2265,20 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 6 )
 
-[node name="Ceiling10" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="9"]
+[node name="Ceiling15" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="9"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 20, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling15" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling15" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling10" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="10"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 20, 10 )
 __meta__ = {
 "_edit_group_": true
@@ -891,7 +2291,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 6 )
 
-[node name="Ceiling11" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="10"]
+[node name="Ceiling11" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="11"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 10, 0 )
 __meta__ = {
 "_edit_group_": true
@@ -904,7 +2304,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 6 )
 
-[node name="Ceiling12" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="11"]
+[node name="Ceiling12" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="12"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 10, 10 )
 __meta__ = {
 "_edit_group_": true
@@ -917,7 +2317,7 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 6 )
 
-[node name="Ceiling13" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="12"]
+[node name="Ceiling13" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="13"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 10, 10 )
 __meta__ = {
 "_edit_group_": true
@@ -930,7 +2330,696 @@ shape = SubResource( 1 )
 mesh = SubResource( 2 )
 material = SubResource( 6 )
 
-[node name="Ceiling14" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="13"]
+[node name="Ceiling20" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="14"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 20, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling20" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling20" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling21" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="15"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 20, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling21" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling21" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling22" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="16"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 20, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling22" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling22" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling23" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="17"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 20, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling23" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling23" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling24" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="18"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 20, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling24" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling24" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling25" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="19"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 20, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling25" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling25" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling27" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="20"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 20, -10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling27" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling27" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling28" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="21"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 20, -10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling28" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling28" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling29" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="22"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 20, -10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling29" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling29" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling30" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="23"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 20, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling30" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling30" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling31" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="24"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 20, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling31" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling31" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling32" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="25"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 20, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling32" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling32" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling33" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="26"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 20, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling33" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling33" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling34" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="27"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 20, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling34" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling34" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling35" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="28"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 20, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling35" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling35" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling36" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="29"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -60, 20, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling36" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling36" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling37" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="30"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 20, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling37" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling37" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling39" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="31"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 20, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling39" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling39" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling40" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="32"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 20, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling40" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling40" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling41" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="33"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 20, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling41" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling41" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling42" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="34"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 20, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling42" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling42" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling43" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="35"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 20, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling43" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling43" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling44" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="36"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 20, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling44" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling44" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling45" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="37"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 20, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling45" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling45" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling46" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="38"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 20, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling46" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling46" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling47" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="39"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 20, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling47" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling47" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling48" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="40"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 20, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling48" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling48" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling49" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="41"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 20, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling49" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling49" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling50" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="42"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 20, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling50" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling50" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling51" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="43"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 20, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling51" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling51" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling52" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="44"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 20, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling52" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling52" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling53" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="45"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -30, 20, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling53" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling53" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling54" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="46"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 20, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling54" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling54" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling55" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="47"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 20, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling55" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling55" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling56" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="48"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 20, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling56" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling56" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling57" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="49"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 20, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling57" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling57" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling58" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="50"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -20, 20, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling58" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling58" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling59" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="51"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 20, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling59" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling59" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling60" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="52"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 20, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling60" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling60" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling61" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="53"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 20, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling61" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling61" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling62" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="54"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 20, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling62" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling62" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling63" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="55"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -10, 20, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling63" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling63" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling64" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="56"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -60 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling64" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling64" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling65" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="57"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -50 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling65" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling65" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling66" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="58"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling66" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling66" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling67" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="59"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -30 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling67" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling67" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling68" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="60"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 20, -20 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling68" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling68" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling38" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="61"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -80, 20, -40 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling38" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling38" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling26" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="62"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -70, 20, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling26" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling26" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling16" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="63"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 20, 10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling16" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling16" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling17" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="64"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -40, 20, -10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling17" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling17" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling18" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="65"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 20, -10 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling18" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling18" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling19" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="66"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -50, 20, 0 )
+__meta__ = {
+"_edit_group_": true
+}
+
+[node name="CollisionShape" type="CollisionShape" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling19" index="0"]
+shape = SubResource( 1 )
+
+[node name="CSGMesh" type="CSGMesh" parent="Objects/FloorsWallCeilings/Ceilings/Ceiling19" index="1"]
+mesh = SubResource( 2 )
+material = SubResource( 6 )
+
+[node name="Ceiling14" type="StaticBody" parent="Objects/FloorsWallCeilings/Ceilings" index="67"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 10, 0 )
 __meta__ = {
 "_edit_group_": true
@@ -986,13 +3075,35 @@ __meta__ = {
 [node name="CollisionShape" type="CollisionShape" parent="Objects/InvisWalls/InvisWall3" index="0"]
 shape = SubResource( 7 )
 
-[node name="CPUParticles" type="CPUParticles" parent="." index="4"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 12.4263, 0 )
-amount = 100
-lifetime = 5.0
-mesh = SubResource( 8 )
-emission_shape = 1
-emission_sphere_radius = 50.0
+[node name="Guard" parent="." index="3" instance=ExtResource( 2 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -48, 2, 3 )
 
-[node name="Guard" parent="." index="5" instance=ExtResource( 2 )]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -32, 2, 0 )
+[node name="Player" parent="." index="4"]
+transform = Transform( -0.707107, 0, -0.707107, 0, 1, 0, 0.707107, 0, -0.707107, -10, 2, -2 )
+
+[node name="Baddies" type="Spatial" parent="." index="5"]
+
+[node name="Enemy" parent="Baddies" index="0" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -13, 2, -23 )
+moveSpeed = 3.0
+
+[node name="Enemy2" parent="Baddies" index="1" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.7946, 2, -23 )
+moveSpeed = 3.0
+
+[node name="Enemy3" parent="Baddies" index="2" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -22.7946, 2, -37.5519 )
+moveSpeed = 3.0
+
+[node name="Enemy4" parent="Baddies" index="3" instance=ExtResource( 5 )]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -9.14328, 2, -37.5519 )
+moveSpeed = 3.0
+
+[node name="GuardFight1StartArea" type="Area" parent="." index="6"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -55, 4, -40 )
+
+[node name="CollisionShape" type="CollisionShape" parent="GuardFight1StartArea" index="0"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
+shape = SubResource( 8 )
+
+[connection signal="body_entered" from="GuardFight1StartArea" to="." method="_on_GuardFight1StartArea_body_entered"]

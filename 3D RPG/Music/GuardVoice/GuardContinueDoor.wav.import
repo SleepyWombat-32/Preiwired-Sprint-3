@@ -1,0 +1,21 @@
+[remap]
+
+importer="wav"
+type="AudioStreamSample"
+path="res://.import/GuardContinueDoor.wav-35b202139ca8a7cc8f4be101a479c035.sample"
+
+[deps]
+
+source_file="res://Music/GuardVoice/GuardContinueDoor.wav"
+dest_files=[ "res://.import/GuardContinueDoor.wav-35b202139ca8a7cc8f4be101a479c035.sample" ]
+
+[params]
+
+force/8_bit=false
+force/mono=false
+force/max_rate=false
+force/max_rate_hz=44100
+edit/trim=false
+edit/normalize=false
+edit/loop=false
+compress/mode=0
