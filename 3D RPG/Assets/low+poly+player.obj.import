@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/low+poly+player.obj-f157acaffd5e01e19de0f749220068ca.mesh"
+
+[deps]
+
+files=[ "res://.import/low+poly+player.obj-f157acaffd5e01e19de0f749220068ca.mesh" ]
+
+source_file="res://Assets/low+poly+player.obj"
+dest_files=[ "res://.import/low+poly+player.obj-f157acaffd5e01e19de0f749220068ca.mesh", "res://.import/low+poly+player.obj-f157acaffd5e01e19de0f749220068ca.mesh" ]
+
+[params]
+
+generate_tangents=true
+scale_mesh=Vector3( 1, 1, 1 )
+offset_mesh=Vector3( 0, 0, 0 )
+optimize_mesh=true
